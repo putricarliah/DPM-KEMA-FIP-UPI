@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produk Hukum — DPM KEMA FIP UPI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="header-logos">
+        <div class="logo-box">UPI</div>
+        <div class="logo-box">DPM</div>
+      </div>
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="produk-hukum.html" class="active">Produk Hukum</a></li>
+          <li><a href="aspirasi.html">Aspirasi</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <div class="logo-box">Parlemen<br>Vidyaloka</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" style="padding:70px 24px 80px;">
+    <div class="hero-inner">
+      <span class="badge">Produk Hukum</span>
+      <h1>Arsip Legislasi</h1>
+      <p>Kumpulan produk hukum yang disahkan oleh DPM KEMA FIP UPI.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="search-bar">
+        <input type="text" id="searchHukum" placeholder="Cari produk hukum..." oninput="filterHukum()" />
+      </div>
+
+      <div class="filter-tabs">
+        <button class="active" onclick="setFilter(this, 'semua')">Semua</button>
+        <button onclick="setFilter(this, 'UU')">Undang-Undang</button>
+        <button onclick="setFilter(this, 'SK')">SK</button>
+        <button onclick="setFilter(this, 'AD/ART')">AD/ART</button>
+        <button onclick="setFilter(this, 'Risalah')">Risalah</button>
+      </div>
+
+      <div class="hukum-list" id="hukumList">
+        <div class="hukum-item" data-jenis="UU">
+          <div>
+            <h4>UU No. 01 Tahun 2026 tentang AD/ART KEMA FIP UPI</h4>
+            <div class="hukum-meta">
+              <span>UU</span>
+              <span>2026</span>
+              <span>Berlaku</span>
+            </div>
+          </div>
+          <a href="#" class="btn-download">Download PDF</a>
+        </div>
+
+        <div class="hukum-item" data-jenis="SK">
+          <div>
+            <h4>SK No. 05 Tahun 2026 tentang Pengesahan Kepengurusan DPM</h4>
+            <div class="hukum-meta">
+              <span>SK</span>
+              <span>2026</span>
+              <span>Berlaku</span>
+            </div>
+          </div>
+          <a href="#" class="btn-download">Download PDF</a>
+        </div>
+
+        <div class="hukum-item" data-jenis="Risalah">
+          <div>
+            <h4>Risalah Sidang Pleno I — Evaluasi Program Kerja</h4>
+            <div class="hukum-meta">
+              <span>Risalah</span>
+              <span>2026</span>
+              <span>Arsip</span>
+            </div>
+          </div>
+          <a href="#" class="btn-download">Download PDF</a>
+        </div>
+
+        <div class="hukum-item" data-jenis="UU">
+          <div>
+            <h4>UU No. 02 Tahun 2026 tentang Mekanisme Aspirasi Mahasiswa</h4>
+            <div class="hukum-meta">
+              <span>UU</span>
+              <span>2026</span>
+              <span>Berlaku</span>
+            </div>
+          </div>
+          <a href="#" class="btn-download">Download PDF</a>
+        </div>
+
+        <div class="hukum-item" data-jenis="AD/ART">
+          <div>
+            <h4>AD/ART KEMA FIP UPI Periode 2026/2027</h4>
+            <div class="hukum-meta">
+              <span>AD/ART</span>
+              <span>2026</span>
+              <span>Berlaku</span>
+            </div>
+          </div>
+          <a href="#" class="btn-download">Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>DPM KEMA FIP UPI</h3>
+        <p>Dewan Perwakilan Mahasiswa Keluarga Mahasiswa Fakultas Ilmu Pendidikan Universitas Pendidikan Indonesia. Periode 2026/2027.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="produk-hukum.html">Produk Hukum</a></li>
+          <li><a href="aspirasi.html">Aspirasi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="https://instagram.com/dpmkemafipupi" target="_blank">@dpmkemafipupi</a></li>
+          <li><a href="mailto:dpmkemafipupi@upi.edu">dpmkemafipupi@upi.edu</a></li>
+          <li>FIP UPI, Bandung</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 DPM KEMA FIP UPI · Viva Legislativa</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
